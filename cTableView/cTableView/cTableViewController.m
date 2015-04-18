@@ -41,7 +41,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10;
+    return 30;
 }
 
 
@@ -59,6 +59,8 @@
     
     //Awake from nib
     [cell awakeFromNib];
+    
+
     
 //    cell.textLabel.text = @"Cell";
     cell.cLabel.text = @"Create TableView By Code!";

@@ -14,21 +14,30 @@
     // Initialization code
     
     //Create Label
-    self.cLabel = [[UILabel alloc]initWithFrame:
+    if (!self.cLabel) {
+        
+        self.cLabel = [[UILabel alloc]initWithFrame:
                        CGRectMake(0, 0, self.frame.size.width-50, self.frame.size.height)];
-    self.cLabel.numberOfLines = 0;
-    self.cLabel.adjustsFontSizeToFitWidth = YES;
-    self.cLabel.backgroundColor = [UIColor clearColor];
-    self.cLabel.textAlignment = NSTextAlignmentCenter;
+        self.cLabel.numberOfLines = 0;
+        self.cLabel.adjustsFontSizeToFitWidth = YES;
+        self.cLabel.backgroundColor = [UIColor clearColor];
+        self.cLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [self addSubview:self.cLabel];
+        
+    }
     
-    [self addSubview:self.cLabel];
 
     //Create Image
-    self.cImageView = [[UIImageView alloc]initWithFrame:
-                       CGRectMake(self.cLabel.frame.size.width, 0,
-                                  self.frame.size.height, self.frame.size.height)];
-    
-    [self addSubview:self.cImageView];
+    if (!self.cImageView) {
+        
+        self.cImageView = [[UIImageView alloc]initWithFrame:
+                           CGRectMake(self.cLabel.frame.size.width, 0,
+                                      self.frame.size.height, self.frame.size.height)];
+        
+        [self addSubview:self.cImageView];
+        
+    }
     
 }
 
