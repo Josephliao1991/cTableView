@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface cTableViewCell : UITableViewCell
 
-@property UILabel *cLabel;
-@property UIImageView *cImageView;
+@property (nonnull, nonatomic, readonly) UILabel *cLabel;
+@property (nonnull, nonatomic, readonly) UIImageView *cImageView;
 
 @end

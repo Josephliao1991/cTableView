@@ -51,16 +51,14 @@
     
     // Configure the cell...
 
-    //Regist cTableCell ReuseIdentifier to cTableView
-    [tableView registerClass:cTableViewCell.self forCellReuseIdentifier:@"Cell"];
+//    //Regist cTableCell ReuseIdentifier to cTableView
+//    [tableView registerClass:cTableViewCell.self forCellReuseIdentifier:@"Cell"];
     
     
     cTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     //Awake from nib
-    [cell awakeFromNib];
-    
-
+//    [cell awakeFromNib];
     
 //    cell.textLabel.text = @"Cell";
     cell.cLabel.text = @"Create TableView By Code!";

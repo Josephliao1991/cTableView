@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "cTableViewController.h"
+#import "cTableViewCell.h"
 
 @interface ViewController ()
 
@@ -32,6 +33,9 @@
     
     //Add TableView on View
     [self.view addSubview:self.cTableView];
+    
+    //Regist cTableCell ReuseIdentifier to cTableView
+    [self.cTableView registerClass:cTableViewCell.self forCellReuseIdentifier:@"Cell"];
     
     //Set TableView Controller
     self.cTableViewController = [cTableViewController new];
